@@ -1,14 +1,13 @@
 Proyecto de Prueba Técnica
-Este repositorio contiene el código fuente del proyecto de prueba técnica completado según los criterios de evaluación proporcionados. El proyecto ha sido desarrollado con una combinación de HTML, CSS, JavaScript y se ha desplegado en WordPress para poder integrarle ACF (Advanced Custom Fields).
+Este repositorio contiene el código fuente del proyecto de prueba técnica completado según los criterios de evaluación proporcionados. El proyecto ha sido desarrollado con una combinación de HTML, CSS (SCSS), JavaScript y se ha desplegado en WordPress para poder integrarle ACF (Advanced Custom Fields).
 Descripción
 Este proyecto incluye:
 Funcionalidades interactivas implementadas con JavaScript.
 Despliegue en un host gratuito con WordPress.
-Maquetación precisa y diseño responsive, asegurando que la página se vea bien en dispositivos de escritorio y móviles, pero también en pantallas medianas, de tablet..
+Maquetación precisa y diseño responsive, asegurando que la página se vea bien en dispositivos de escritorio y móviles, pero también en pantallas medianas y de tablet.
 
 Instala las dependencias:
-bash
-Copiar código
+
 npm install
 
 Si deseas modificar los archivos scss, tienes que ejecutar en la consola "npm run sass" para compilarlos al archivo style.css
