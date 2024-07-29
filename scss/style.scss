@@ -1,0 +1,158 @@
+@use 'hero';
+@use 'section-2';
+@use 'section-3';
+
+$primary-color: #194350;
+$secondary-color: #2ecc71;
+$accent-color: #FF8882;
+$font-family: 'Josefin Sans', sans-serif;
+$paragraph-font-family: 'Lato', sans-serif;
+
+body {
+    margin: 0;
+    font-family: $font-family;
+    background-color: #f4f4f4;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+footer {
+    width: 100%auto;
+    height: 227px;
+    background-color: $primary-color;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .footer-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .footer-logo {
+            margin-right: 500px;
+            margin-top: 30px;
+
+            .footer-logo-img {
+                height: 93px; // Ajusta el tamaño del logo según sea necesario
+                width: auto;
+            }
+        }
+
+        .footer-divider {
+            width: 1px;
+            height: 137.96px; // Ajusta la altura de la línea divisoria
+            border-color: white;
+            background-color: white;
+            margin: 0 20px;
+            opacity: 50%;
+        }
+
+        .footer-text {
+            font-family: $paragraph-font-family;
+            font-weight: 400;
+            font-style: italic;
+            font-size: 16px;
+            line-height: 19.2px;
+            margin-top: 40px;
+            margin-left: 150px;
+            text-align: right;
+            opacity: 0.6; // Opacidad general del contenido del footer
+        }
+    }
+}
+
+// Propiedades para pantallas medianas
+
+@media (max-width: 1200px) {
+    footer {
+        height: 200px; // Reducir la altura del footer
+
+        .footer-content {
+            .footer-logo {
+                margin-right: 200px;
+
+                .footer-logo-img {
+                    height: 70px; // Reducir el tamaño del logo
+                }
+            }
+
+            .footer-divider {
+                height: 100px; // Reducir la altura de la línea divisoria
+            }
+
+            .footer-text {
+                font-size: 14px;
+                line-height: 17px;
+                margin-left: 50px;
+            }
+        }
+    }
+}
+
+// Propiedades para pantallas pequeñas
+
+@media (max-width: 768px) {
+    footer {
+        height: 180px; // Reducir la altura del footer
+
+        .footer-content {
+            .footer-logo {
+                margin-right: 50px; // Ajustar márgenes
+
+                .footer-logo-img {
+                    height: 60px; // Reducir el tamaño del logo
+                }
+            }
+
+            .footer-divider {
+                height: 100px; // Ajustar la altura de la línea divisoria
+            }
+
+            .footer-text {
+                font-size: 12px;
+                line-height: 15px;
+                margin-left: 20px; // Ajustar márgenes
+            }
+        }
+    }
+}
+
+// Propiedades para pantallas muy pequeñas
+
+@media (max-width: 480px) {
+    footer {
+        height: 120px; // Reducir la altura del footer
+
+        .footer-content {
+            .footer-logo {
+                margin-right: 10px; // Ajustar márgenes
+
+                .footer-logo-img {
+                    height: 50px; // Reducir el tamaño del logo
+                }
+            }
+
+            .footer-divider {
+                height: 70px; // Ajustar la altura de la línea divisoria
+            }
+
+            .footer-text {
+                font-size: 13px;
+                line-height: 12px;
+                margin-left: 10px; // Ajustar márgenes
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

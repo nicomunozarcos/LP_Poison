@@ -1,0 +1,415 @@
+$primary-color: #194350;
+$secondary-color: #2ecc71;
+$accent-color: #FF8882;
+$font-family: 'Josefin Sans', sans-serif;
+$paragraph-font-family: 'Lato', sans-serif;
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    background-color: $primary-color;
+    color: white;
+    text-align: left;
+    height: 92vh;
+    position: relative;
+    opacity: 1;
+
+    .logo-container {
+        position: absolute;
+        top: 20px;
+        left: 49%;
+        transform: translateX(-50%);
+        
+        .logo {
+            height: 65.64px;
+            width: auto;
+        }
+    }
+
+    .hero-text {
+        max-width: 50%;
+        margin-left: 0;
+        z-index: 2;
+        margin-top: -5%;
+
+        .buy-poison {
+            font-family: $font-family;
+            font-weight: 700;
+            font-style: italic;
+            font-size: 138px;
+            line-height: 138px;
+        }
+
+        .trust-us {
+            font-family: $font-family;
+            font-weight: 700;
+            font-style: italic;
+            font-size: 138px;
+            line-height: 138px;
+            color: transparent;
+            -webkit-text-stroke: 2px $accent-color;
+            margin: 20px 0;
+            margin-left: 38px;
+            margin-top: -175px;
+        }
+
+        p {
+            width: 386px;
+            height: auto;
+            font-family: $paragraph-font-family;
+            font-weight: 300 !important;
+            font-size: 18px;
+            line-height: 26.28px;
+            opacity: 0.7;
+            margin: 0;
+        }
+
+        button {
+            position: relative;
+            width: 257px;
+            height: 63px;
+            padding: 21px 41px;
+            margin-top: 40px;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: $primary-color;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: $font-family;
+            font-size: 21px;
+            font-weight: 700;
+            line-height: 21px;
+            letter-spacing: 0.195em;
+            text-align: center;
+            white-space: nowrap;
+        
+            .rect-top-left, .rect-bottom-right {
+                position: absolute;
+                width: 28px;
+                height: 7px;
+                background: rgba(255, 255, 255, 0.8);
+                border-radius: 2px;
+                transition: all 0.5s ease; // Transición suave para hover
+            }
+        
+            .rect-top-left {
+                top: 5px;
+                left: -14px;
+            }
+        
+            .rect-bottom-right {
+                bottom: 5px;
+                right: -14px;
+            }
+        
+            &:hover {
+                .rect-top-left {
+                    left: calc(100% - 14px); // Mover a la esquina superior derecha en hover
+                }
+        
+                .rect-bottom-right {
+                    right: calc(100% - 14px); // Mover a la esquina inferior izquierda en hover
+                }
+            }
+        }
+    }
+
+    .hero-image {
+        max-width: 30%;
+        position: relative;
+        margin-left: -7%;
+        top: 6%;
+        z-index: 1;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    .disclaimer-text {
+        width: 355px;
+        font-family: $paragraph-font-family;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14.4px;
+        text-align: right;
+        opacity: 0.7;
+        position: absolute;
+        bottom: 20px;
+        right: 20%;
+    }
+
+    .icon-container {
+        position: absolute;
+        width: 20.25px;
+        height: 48px;
+        bottom: 20px;
+        left: 365px;
+        animation: bounce 2s infinite ease-in-out; // Animación de rebote
+
+        .outer-oval {
+            position: relative;
+            width: 18.25px;
+            height: 28.88px;
+            border: 2px solid #FFFFFF;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .inner-line {
+            position: relative;
+            width: 0px;
+            height: 8.45px;
+            border: 1px solid #FFFFFF;
+            top: 4.45px;
+        }
+
+        .diamond {
+            position: relative;
+            width: 0;
+            height: 0;
+            margin-left: 3.42px;
+            margin-top: 6px;
+            border-left: 8.05px solid transparent;
+            border-right: 8.05px solid transparent;
+            border-top: 8.4px solid #FFFFFF;
+        }
+    }
+
+    // Propiedades para pantallas medianas
+
+    @media (max-width: 1200px) {
+        .hero {
+            height: 80vh; // Reducir altura en pantallas medianas
+        }
+        
+        .hero-text {
+            max-width: 80%;
+            margin-top: 0;
+            text-align: center;
+
+            .buy-poison {
+                font-size: 138px;
+                line-height: 138px;
+                margin-top: -200px;
+                text-align: left;
+                white-space: nowrap;
+            }
+
+            .trust-us {
+                font-size: 138px;
+                line-height: 138px;
+                margin-left: -155px;
+                margin-top: -160px;
+            }
+
+            p {
+                width: 100%;
+                font-size: 20px;
+                line-height: 24px;
+                text-align: left;
+            }
+
+            button {
+                width: 307px;
+                height: 83px;
+                font-size: 21px;
+                line-height: 21px;
+                padding: 21px 41px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 220px;
+            }
+        }
+
+        .hero-image {
+            display: none;
+        }
+
+        .disclaimer-text {
+            width: 100%;
+            text-align: center;
+            right: 0;
+            left: 0;
+            bottom: 10px;
+        }
+
+        .icon-container {
+            width: 15px;
+            height: 36px;
+            left: 50%;
+            bottom: 80px;
+            transform: translateX(-50%);
+        }
+    }
+
+    // Propiedades para pantallas pequeñas
+
+    @media (max-width: 768px) {
+        .hero {
+            height: 75vh; // Reducir altura en pantallas pequeñas
+        }
+
+        .hero-text {
+            max-width: 75%;
+            text-align: center;
+            margin-top: -50px;
+
+            .buy-poison {
+                font-size: 80px;
+                line-height: 80px;
+                margin-top: -200px;
+            }
+
+            .trust-us {
+                font-size: 80px;
+                line-height: 80px;
+                margin-left: -210px;
+                margin-top: -100px;
+                -webkit-text-stroke: 1.7px $accent-color;
+            }
+
+            p {
+                width: 100%;
+                font-size: 20px;
+                line-height: 28px;
+                text-align: left;
+            }
+
+            button {
+                width: 307px;
+                height: 83px;
+                font-size: 21px;
+                line-height: 21px;
+                padding: 21px 41px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 200px;
+            }
+        }
+
+        .logo-container {
+            .logo {
+                height: 50px;
+                width: auto;
+            }
+        }
+
+        .disclaimer-text {
+            font-size: 10px;
+            line-height: 12px;
+        }
+
+        .icon-container {
+            width: 15px;
+            height: 36px;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 80px;
+        }
+    }
+
+    // Propiedades para pantallas de móviles
+
+    @media (max-width: 480px) {
+        flex-direction: column;
+        align-items: center;
+
+        .hero {
+            height: 70vh; 
+        }
+
+        .logo-container {
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            .logo {
+                height: 40px;
+                width: auto;
+            }
+        }
+
+        .hero-text {
+            max-width: 100%;
+            text-align: center;
+            margin-top: 0;
+
+            .buy-poison {
+                font-size: 60px;
+                line-height: 60px;
+                margin-top: -220px;
+            }
+
+            .trust-us {
+                font-size: 60px;
+                line-height: 60px;
+                margin-left: -99px;
+                margin-top: -77px;
+                -webkit-text-stroke: 1.7px $accent-color;
+            }
+
+            p {
+                width: 95%;
+                font-size: 18px;
+                line-height: 22px;
+                text-align: left;
+                margin-left: 15px;
+            }
+
+            button {
+                width: 257px;
+                height: 63px;
+                font-size: 21px;
+                line-height: 21px;
+                padding: 21px 41px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 250px;
+            }
+        }
+
+        .hero-image {
+            display: none;
+        }
+
+        .disclaimer-text {
+            font-size: 9px;
+            line-height: 12px;
+            bottom: 5px;
+            text-align: center;
+            width: 100%;
+            right: 0;
+            left: 0;
+        }
+
+        .icon-container {
+            width: 7px;
+            height: 15px;
+            left: 50%;
+            bottom: 80px;
+            transform: translateX(-50%);
+        }
+    }
+}
